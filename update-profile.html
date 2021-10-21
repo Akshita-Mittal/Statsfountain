@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<title>Dashboard</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, shrink-to-fit=no">
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="assets/css/theme.css">
+        <link rel="stylesheet" href="assets/css/main.css">
+        <link rel="stylesheet" href="assets/css/dashboard.css">
+        <link rel="stylesheet" href="assets/css/update-profile.css">
+	</head>
+<body>
+  <div id="overlay-bg"></div> 
+  <div id="mySidebar" class="sidebar">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+    <a href="dashboard.html"><img src="assets/images/dashboard-icon.png" alt="icon" /> Dashboard</a>
+    <a href="current-uploads.html"><img src="assets/images/uploads-icon.png" alt="icon" /> Current Uploads</a>
+    <a href="upload-video.html"><img src="assets/images/add-icon.png" alt="icon" /> Add Advertisement</a>
+  </div>  
+    <nav class="navbar navbar-expand-lg navbar-dark bg-white fixed-top" id="mainNav">
+        <a class="navbar-brand" href="index.html">Statsfountain</a>
+        <button class="navbar-toggler navbar-toggler-right" onclick="openNav()" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <h2>Update profile</h2>
+          <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
+            <li class="nav-item active" data-toggle="tooltip" data-placement="right" title="Dashboard">
+              <a class="nav-link" href="dashboard.html">
+                <img src="assets/images/dashboard-icon-red.png" alt="icon" />
+                <span class="nav-link-text">Dashboard</span>
+              </a>
+            </li>
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Charts">
+              <a class="nav-link" href="current-uploads.html">
+                <img src="assets/images/uploads-icon.png" alt="icon" />
+                <span class="nav-link-text">Current Uploads</span>
+              </a>
+            </li>
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
+              <a class="nav-link" href="upload-video.html">
+                <img src="assets/images/add-icon.png" alt="icon" />
+                <span class="nav-link-text">Add Advertisement</span>
+              </a>
+            </li>
+          </ul>
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle mr-lg-2" id="alertsDropdown" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <img src="assets/images/notification-icon.png" alt="img" />
+                <span class="d-lg-none">Alerts
+                  <span class="badge badge-pill badge-warning">6 New</span>
+                </span>
+                <span class="indicator d-none d-lg-block">
+                  <i class="fa fa-fw fa-circle"></i>
+                </span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <div class="user-wrap">
+                <div class="media">
+                  <img class="mr-3" src="assets/images/user.png" alt="user" />
+                  <div class="media-body">
+                    <h5>Welcome</h5>
+                    <div class="user-dropdown-wrap">
+                      <div class="dropdown">
+                          <span>Michael Monet <i class="fa fa-angle-down" aria-hidden="true"></i></span>
+                          <ul class="dropdown-content">
+                          <li><a href="update-profile.html"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit Profile</a></li>
+                          <li><a href="login.html"><i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a></li>
+                          </ul>
+                      </div>
+                  </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <div class="content-wrapper">
+        <div class="upload-media-wrap">
+            <div class="media">
+                <div class="file-uploader">
+                    <input type="file" accept="image/*">
+                    <img class="mr-3" src="assets/images/user-img.png" alt="image" for="file-upload">
+                </div>
+                <div class="media-body">
+                  <h5>Upload new profile image</h5>
+                  <p>Drop files here or click to upload images</p>
+                </div>
+            </div>
+        </div>  
+        <div class="form-box">
+            <form action="#">
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-input">
+                      <label for="#">First Name</label>
+                      <input type="text" value="Michael">
+                    </div>
+                  </div>
+            
+                  <div class="col-md-6">
+                    <div class="form-input">
+                      <label for="#">Last Name</label>
+                      <input type="text" value="Monet">
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-input">
+                      <label for="#">email address</label>
+                      <input type="email" placeholder="michael_monet_22@gmail.com" class="no-border-input" disabled>
+                    </div>
+                  </div>
+            
+                  <div class="col-md-4">
+                    <div class="form-input">
+                      <label for="#">Password</label>
+                      <input type="password" value="***********" class="no-border-input">
+                    </div>
+                  </div>
+
+                  <div class="col-md-2">
+                    <div class="form-input">
+                        <a href="change-password-profile.html" class="change-password-txt">Change Password</a>
+                    </div>
+                  </div>
+            
+                </div>
+                <div class="col-md-12">
+                  <div class="btn-wrap">
+                    <button class="button button--white-sm" type="button">Cancel</button>
+                    <button class="button button--red-sm" type="button">Save</button>
+                  </div>
+                </div>
+            
+            </form>
+        </div>  
+        
+      </div>
+
+<div class="footer">Copyright © statsfountain. All rights reserved.</div>
+
+
+<script src="https://unpkg.com/react-bootstrap@next/dist/react-bootstrap.min.js"></script>
+<script>
+  function openNav() {
+    document.getElementById("mySidebar").style.width = "250px";
+    document.getElementById("overlay-bg").style.display = "block";
+  }
+  
+  function closeNav() {
+    document.getElementById("mySidebar").style.width = "0";
+    document.getElementById("overlay-bg").style.display = "none";
+  }
+</script>
+
+</body>
+</html>

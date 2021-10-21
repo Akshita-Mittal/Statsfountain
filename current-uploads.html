@@ -1,0 +1,305 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<title>Dashboard</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, shrink-to-fit=no">
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="assets/css/theme.css">
+        <link rel="stylesheet" href="assets/css/main.css">
+        <link rel="stylesheet" href="assets/css/dashboard.css">
+        <link rel="stylesheet" href="assets/css/current-uploads.css">
+	</head>
+<body>
+  <div id="overlay-bg"></div> 
+  <div id="mySidebar" class="sidebar">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+    <a href="dashboard.html"><img src="assets/images/dashboard-icon.png" alt="icon" /> Dashboard</a>
+    <a href="current-uploads.html"><img src="assets/images/uploads-icon.png" alt="icon" /> Current Uploads</a>
+    <a href="upload-video.html"><img src="assets/images/add-icon.png" alt="icon" /> Add Advertisement</a>
+  </div>  
+    <nav class="navbar navbar-expand-lg navbar-dark bg-white fixed-top" id="mainNav">
+        <a class="navbar-brand" href="index.html">Statsfountain</a>
+        <button class="navbar-toggler navbar-toggler-right" onclick="openNav()" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <h2>Current Uploads</h2>
+          <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
+              <a class="nav-link" href="dashboard.html">
+                <img src="assets/images/dashboard-icon.png" alt="icon" />
+                <span class="nav-link-text">Dashboard</span>
+              </a>
+            </li>
+            <li class="nav-item active" data-toggle="tooltip" data-placement="right" title="Charts">
+              <a class="nav-link" href="current-uploads.html">
+                <img src="assets/images/uploads-icon-red.png" alt="icon" />
+                <span class="nav-link-text">Current Uploads</span>
+              </a>
+            </li>
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
+              <a class="nav-link" href="upload-video.html">
+                <img src="assets/images/add-icon.png" alt="icon" />
+                <span class="nav-link-text">Add Advertisement</span>
+              </a>
+            </li>
+          </ul>
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle mr-lg-2" id="alertsDropdown" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <img src="assets/images/notification-icon.png" alt="img" />
+                <span class="d-lg-none">Alerts
+                  <span class="badge badge-pill badge-warning">6 New</span>
+                </span>
+                <span class="indicator d-none d-lg-block">
+                  <i class="fa fa-fw fa-circle"></i>
+                </span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <div class="user-wrap">
+                <div class="media">
+                  <img class="mr-3" src="assets/images/user.png" alt="user" />
+                  <div class="media-body">
+                    <h5>Welcome</h5>
+                    <div class="user-dropdown-wrap">
+                      <div class="dropdown">
+                          <span>Michael Monet <i class="fa fa-angle-down" aria-hidden="true"></i></span>
+                          <ul class="dropdown-content">
+                          <li><a href="update-profile.html"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit Profile</a></li>
+                          <li><a href="login.html"><i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a></li>
+                          </ul>
+                      </div>
+                  </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+    </nav>
+      <div class="content-wrapper">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="search-box-wrap">
+              <div class="searchbox" onClick="onClick(event)">
+                <input type="text" placeholder="Search here for an ad"/>
+                <button class="search-button">
+                  <i class="fa fa-search" aria-hidden="true"></i>
+                </button>
+              </div>
+              <div class="filter-button">
+                <select class="selectpicker" data-style="btn-primary">
+                    <option>Filter</option>
+                    <option>Ketchup</option>
+                    <option>Relish</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="video-upload-wrap">
+                <video class="video-js vjs-default-skin" poster="assets/images/video-img1.png" muted=""></video>
+                <div class="dropdown-wrap">
+                    <div class="dropdown">
+                        <span><img src="assets/images/Ellipse.png" alt="img" /></span>
+                        <ul class="dropdown-content">
+                        <li><a href="#">Edit Ad</a></li>
+                        <li><a href="#">Download Reviews</a></li>
+                        <li><a href="current-review.html">50 Reviews</a></li>
+                        <li><a href="#">Remove Ad</a></li>
+                        </ul>
+                    </div>
+                </div>
+                    
+                <h3 class="video-title">Chocolate Cake Only 3 Ingredients Without Egg</h3>
+                <span class="video-time">1 day ago</span>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="video-upload-wrap">
+                <video class="video-js vjs-default-skin" poster="assets/images/video-img2.png" muted=""></video>
+                <div class="dropdown-wrap">
+                    <div class="dropdown">
+                        <span><img src="assets/images/Ellipse.png" alt="img" /></span>
+                        <ul class="dropdown-content">
+                        <li><a href="#">Edit Ad</a></li>
+                        <li><a href="#">Download Reviews</a></li>
+                        <li><a href="current-review.html">50 Reviews</a></li>
+                        <li><a href="#">Remove Ad</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <h3 class="video-title">Want to know how to be happy?</h3>
+                <span class="video-time">1 day ago</span>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="video-upload-wrap">
+                <video class="video-js vjs-default-skin" poster="assets/images/video-img3.png" muted=""></video>
+                <div class="dropdown-wrap">
+                    <div class="dropdown">
+                        <span><img src="assets/images/Ellipse.png" alt="img" /></span>
+                        <ul class="dropdown-content">
+                        <li><a href="#">Edit Ad</a></li>
+                        <li><a href="#">Download Reviews</a></li>
+                        <li><a href="current-review.html">50 Reviews</a></li>
+                        <li><a href="#">Remove Ad</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <h3 class="video-title">Beautiful  Relaxing Hymms, Peacful Instrumental Music</h3>
+                <span class="video-time">2 day ago</span>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="video-upload-wrap">
+                <video class="video-js vjs-default-skin" poster="assets/images/video-img4.png" muted=""></video>
+                <div class="dropdown-wrap">
+                    <div class="dropdown">
+                        <span><img src="assets/images/Ellipse.png" alt="img" /></span>
+                        <ul class="dropdown-content">
+                        <li><a href="#">Edit Ad</a></li>
+                        <li><a href="#">Download Reviews</a></li>
+                        <li><a href="current-review.html">50 Reviews</a></li>
+                        <li><a href="#">Remove Ad</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <h3 class="video-title">Photography Ideas At Home</h3>
+                <span class="video-time">1 week ago</span>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="video-upload-wrap">
+                <video class="video-js vjs-default-skin" poster="assets/images/video-img5.png" muted=""></video>
+                <div class="dropdown-wrap">
+                    <div class="dropdown">
+                        <span><img src="assets/images/Ellipse.png" alt="img" /></span>
+                        <ul class="dropdown-content">
+                        <li><a href="#">Edit Ad</a></li>
+                        <li><a href="#">Download Reviews</a></li>
+                        <li><a href="current-review.html">50 Reviews</a></li>
+                        <li><a href="#">Remove Ad</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <h3 class="video-title">Wildlife Sanctuaries In India</h3>
+                <span class="video-time">2 week ago</span>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="video-upload-wrap">
+                <video class="video-js vjs-default-skin" poster="assets/images/video-img6.png" muted=""></video>
+                <div class="dropdown-wrap">
+                    <div class="dropdown">
+                        <span><img src="assets/images/Ellipse.png" alt="img" /></span>
+                        <ul class="dropdown-content">
+                        <li><a href="#">Edit Ad</a></li>
+                        <li><a href="#">Download Reviews</a></li>
+                        <li><a href="current-review.html">50 Reviews</a></li>
+                        <li><a href="#">Remove Ad</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <h3 class="video-title">Beautiful Art And Craft With Paper</h3>
+                <span class="video-time">1 week ago</span>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="video-upload-wrap">
+                <video class="video-js vjs-default-skin" poster="assets/images/video-img7.png" muted=""></video>
+                <div class="dropdown-wrap">
+                    <div class="dropdown">
+                        <span><img src="assets/images/Ellipse.png" alt="img" /></span>
+                        <ul class="dropdown-content">
+                        <li><a href="#">Edit Ad</a></li>
+                        <li><a href="#">Download Reviews</a></li>
+                        <li><a href="current-review.html">50 Reviews</a></li>
+                        <li><a href="#">Remove Ad</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <h3 class="video-title">Clay Modelling Ideas | Clay Modelling For Kids</h3>
+                <span class="video-time">4 week ago</span>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="video-upload-wrap">
+                <video class="video-js vjs-default-skin" poster="assets/images/video-img8.png" muted=""></video>
+                <div class="dropdown-wrap">
+                    <div class="dropdown">
+                        <span><img src="assets/images/Ellipse.png" alt="img" /></span>
+                        <ul class="dropdown-content">
+                        <li><a href="#">Edit Ad</a></li>
+                        <li><a href="#">Download Reviews</a></li>
+                        <li><a href="current-review.html">50 Reviews</a></li>
+                        <li><a href="#">Remove Ad</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <h3 class="video-title">Travelling To The Laest Visited Country In The World</h3>
+                <span class="video-time">4 week ago</span>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="video-upload-wrap">
+                <video class="video-js vjs-default-skin" poster="assets/images/video-img9.png" muted=""></video>
+                <div class="dropdown-wrap">
+                    <div class="dropdown">
+                        <span><img src="assets/images/Ellipse.png" alt="img" /></span>
+                        <ul class="dropdown-content">
+                        <li><a href="#">Edit Ad</a></li>
+                        <li><a href="#">Download Reviews</a></li>
+                        <li><a href="current-review.html">50 Reviews</a></li>
+                        <li><a href="#">Remove Ad</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <h3 class="video-title">How To Become A Travel Blogger | How to Start A Travelling</h3>
+                <span class="video-time">4 week ago</span>
+            </div>
+          </div>
+
+          <div class="col-md-12">
+            <div class="pagination">
+                <a href="#"><img src="assets/images/prev.png" alt="image" /></a>
+                <a href="#">1</a>
+                <a href="#" class="active">2</a>
+                <a href="#">3</a>
+                <a href="#">4</a>
+                <a href="#">5</a>
+                <a href="#">6</a>
+                <a href="#"><img src="assets/images/next.png" alt="image" /></a>
+              </div>
+          </div>
+          
+        </div>
+      </div>
+
+<div class="footer">Copyright © statsfountain. All rights reserved.</div>
+
+
+
+
+<script src="https://unpkg.com/react-bootstrap@next/dist/react-bootstrap.min.js"></script>
+<script>
+  function openNav() {
+    document.getElementById("mySidebar").style.width = "250px";
+    document.getElementById("overlay-bg").style.display = "block";
+  }
+  
+  function closeNav() {
+    document.getElementById("mySidebar").style.width = "0";
+    document.getElementById("overlay-bg").style.display = "none";
+  }
+</script>
+</body>
+</html>

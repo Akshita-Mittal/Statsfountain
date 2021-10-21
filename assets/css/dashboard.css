@@ -1,0 +1,44 @@
+.square--one li::before {
+    left: -14px;
+    background-color: #d12e1a;
+}
+.square--one{
+    position: relative;
+}
+
+.barchart {
+    margin-bottom: 110px;
+}
+#chart{
+    width: 400px;
+    height:auto;
+    margin: 20px auto;
+}
+.text-center{
+    font-size: 20px;
+    color: #333333;
+    font-weight: 700;
+    font-family: 'Lato', sans-serif;
+}
+
+@media(max-width: 991px){
+    .row-padding {
+        padding: 0 15px;
+    }
+}
+
+@media(max-width: 767px){
+    #chart {
+        width: 280px;
+    }
+    .barchart {
+        margin-bottom: 40px;
+    }
+    .square li {
+        font-size: 12px;
+    }
+    .row-padding .search-box {
+        justify-content: flex-start;
+        margin: 20px 0;
+    }
+}

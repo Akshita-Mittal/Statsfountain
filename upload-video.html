@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<title>Dashboard</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, shrink-to-fit=no">
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="assets/css/theme.css">
+        <link rel="stylesheet" href="assets/css/main.css">
+        <link rel="stylesheet" href="assets/css/dashboard.css">
+        <link rel="stylesheet" href="assets/css/edit-video.css">
+
+	</head>
+<body>
+  <div id="overlay-bg"></div> 
+  <div id="mySidebar" class="sidebar">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+    <a href="dashboard.html"><img src="assets/images/dashboard-icon.png" alt="icon" /> Dashboard</a>
+    <a href="current-uploads.html"><img src="assets/images/uploads-icon.png" alt="icon" /> Current Uploads</a>
+    <a href="upload-video.html"><img src="assets/images/add-icon.png" alt="icon" /> Add Advertisement</a>
+  </div>   
+    <nav class="navbar navbar-expand-lg navbar-dark bg-white fixed-top" id="mainNav">
+        <a class="navbar-brand" href="index.html">Statsfountain</a>
+        <button class="navbar-toggler navbar-toggler-right" onclick="openNav()" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <h2>Add another advertisement</h2>
+          <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
+              <a class="nav-link" href="dashboard.html">
+                <img src="assets/images/dashboard-icon.png" alt="icon" />
+                <span class="nav-link-text">Dashboard</span>
+              </a>
+            </li>
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Charts">
+              <a class="nav-link" href="current-uploads.html">
+                <img src="assets/images/uploads-icon.png" alt="icon" />
+                <span class="nav-link-text">Current Uploads</span>
+              </a>
+            </li>
+            <li class="nav-item active" data-toggle="tooltip" data-placement="right" title="Tables">
+              <a class="nav-link" href="upload-video.html">
+                <img src="assets/images/add-icon-red.png" alt="icon" />
+                <span class="nav-link-text">Add Advertisement</span>
+              </a>
+            </li>
+          </ul>
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle mr-lg-2" id="alertsDropdown" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <img src="assets/images/notification-icon.png" alt="img" />
+                <span class="d-lg-none">Alerts
+                  <span class="badge badge-pill badge-warning">6 New</span>
+                </span>
+                <span class="indicator d-none d-lg-block">
+                  <i class="fa fa-fw fa-circle"></i>
+                </span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <div class="user-wrap">
+                <div class="media">
+                  <img class="mr-3" src="assets/images/user.png" alt="user" />
+                  <div class="media-body">
+                    <h5>Welcome</h5>
+                    <div class="user-dropdown-wrap">
+                      <div class="dropdown">
+                          <span>Michael Monet <i class="fa fa-angle-down" aria-hidden="true"></i></span>
+                          <ul class="dropdown-content">
+                          <li><a href="update-profile.html"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit Profile</a></li>
+                          <li><a href="login.html"><i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a></li>
+                          </ul>
+                      </div>
+                  </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <div class="content-wrapper">
+        <div class="row">
+          <div class="col-md-6">
+              <div class="video-upload">
+                <div id="message"></div>
+                <video class="video-js vjs-default-skin" controls muted id='localVid'></video>
+                <div class="file-uploader">
+                  Drop your file here or  
+                  <input type="file" accept="video/*" />
+                  <label for="file-upload" class="custom-file-upload">
+                   <u>Browse file </u>
+                  </label>
+                </div>
+                <div>
+                </div>
+              </div>
+          </div>
+          <div class="col-md-6">
+            <div class="video-upload">
+              <div id="message"></div>
+              <video class="video-js vjs-default-skin" controls muted id='localVid'></video>
+              <div class="file-uploader">
+                Drop your image here or  
+                <input type="file" accept="video/*" />
+                <label for="file-upload" class="custom-file-upload">
+                 <u>Browse file </u>
+                </label>
+              </div>
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="form-box">
+          <form action="#">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="form-input">
+                    <label for="#">Description</label>
+                    <textarea type="text" placeholder="Type your description of ad here"></textarea>
+                </div>
+              </div>
+              <div class="col-md-12">
+                <div class="form-input">
+                    <label for="#">Tags</label>
+                    <select>
+                      <option>Select your tags or your ad</option>  
+                      <option>Cakes</option>
+                      <option>Bakery</option>
+                      <option>Cream</option>
+                    </select>
+                </div>
+              </div>
+              <div class="col-md-12">
+                <div class="form-input">
+                    <label for="#">Location</label>
+                    <div class="row">
+                      <div class="col-md-4">
+                        <select>
+                          <option>Select country</option>  
+                          <option>Belgium</option>
+                          <option>Belgium</option>
+                          <option>Belgium</option>
+                        </select>
+                      </div>
+                      <div class="col-md-4">
+                        <select>
+                          <option>Select state</option>  
+                          <option>Hainaut</option>
+                          <option>Hainaut</option>
+                          <option>Hainaut</option>
+                        </select>
+                      </div>
+                      <div class="col-md-4">
+                        <select>
+                          <option>Select city</option>  
+                          <option>Chimay</option>
+                          <option>Chimay</option>
+                          <option>Chimay</option>
+                        </select>
+                      </div>
+                    </div>
+                </div>
+              </div>
+              
+              
+              <div class="col-md-6">
+                <div class="form-input">
+                    <label for="#">Age category</label>
+                      <select>
+                        <option>Select age category</option>
+                        <option>Belgium</option>
+                        <option>Belgium</option>
+                      </select>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-input">
+                    <label for="#">Ethnicity</label>
+                      <select>
+                        <option>Select ethnicity</option>
+                        <option>Belgium</option>
+                        <option>Belgium</option>
+                      </select>
+                </div>
+              </div>
+              <div class="col-md-12">
+                <div class="form-input">
+                    <label for="#">Question</label>
+                    <textarea type="text" placeholder="Write your question here"></textarea>
+                </div>
+              </div>
+              
+              <div class="col-md-12">
+                <div class="form-input">
+                   <button class="button" type="button">+ Add more question</button>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-input d-flex align-items-center time--input">
+                   <p>Add time frame</p>
+                   <input type="time">
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-input d-flex align-items-center time--input">
+                   <p>TARGET REVIEWS</p>
+                   <input type="text">
+                   <button class="button paynow--button" type="button">Pay Now</button>
+                </div>
+              </div>
+              <div class="col-md-12">
+                <div class="btn-wrap">
+                  <button class="button red--btn-lg" type="button">Publish</button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+
+        
+      </div>
+
+<div class="footer">Copyright © statsfountain. All rights reserved.</div>
+
+
+<script src="https://unpkg.com/react-bootstrap@next/dist/react-bootstrap.min.js"></script>
+<script>
+  function openNav() {
+    document.getElementById("mySidebar").style.width = "250px";
+    document.getElementById("overlay-bg").style.display = "block";
+  }
+  
+  function closeNav() {
+    document.getElementById("mySidebar").style.width = "0";
+    document.getElementById("overlay-bg").style.display = "none";
+  }
+</script>
+<script>
+  (function localFileVideoPlayerInit(win) {
+  var URL = win.URL || win.webkitURL,
+    displayMessage = (function displayMessageInit() {
+      var node = document.querySelector('#message');
+
+      return function displayMessage(message, isError) {
+        node.innerHTML = message;
+        node.className = isError ? 'error' : 'info';
+      };
+    }()),
+    playSelectedFile = function playSelectedFileInit(event) {
+      var file = this.files[0];
+
+      var type = file.type;
+
+      var videoNode = document.querySelector('video');
+
+      var canPlay = videoNode.canPlayType(type);
+
+      canPlay = (canPlay === '' ? 'no' : canPlay);
+
+      var message = 'Can play type "' + type + '": ' + canPlay;
+
+      var isError = canPlay === 'no';
+
+      displayMessage(message, isError);
+
+      if (isError) {
+       // return;
+      }
+
+      var fileURL = URL.createObjectURL(file);
+
+      videoNode.src = fileURL;
+    },
+    inputNode = document.querySelector('input');
+
+  if (!URL) {
+    displayMessage('Your browser is not ' +
+      '<a href="http://caniuse.com/bloburls">supported</a>!', true);
+
+    return;
+  }
+
+  inputNode.addEventListener('change', playSelectedFile, false);
+
+
+  
+
+
+}(window));
+</script>
+</body>
+</html>

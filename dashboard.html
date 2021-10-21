@@ -1,0 +1,353 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<title>Dashboard</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, shrink-to-fit=no">
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="assets/css/theme.css">
+        <link rel="stylesheet" href="assets/css/main.css">
+        <link rel="stylesheet" href="assets/css/dashboard.css">
+	</head>
+<body>
+  <div id="overlay-bg"></div> 
+  <div id="mySidebar" class="sidebar">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+    <a href="dashboard.html"><img src="assets/images/dashboard-icon.png" alt="icon" /> Dashboard</a>
+    <a href="current-uploads.html"><img src="assets/images/uploads-icon.png" alt="icon" /> Current Uploads</a>
+    <a href="upload-video.html"><img src="assets/images/add-icon.png" alt="icon" /> Add Advertisement</a>
+  </div>  
+    <nav class="navbar navbar-expand-lg navbar-dark bg-white fixed-top" id="mainNav">
+        <a class="navbar-brand" href="index.html">Statsfountain</a>
+        <button class="navbar-toggler navbar-toggler-right" onclick="openNav()" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <h2>Dashboard</h2>
+          <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
+            <li class="nav-item active" data-toggle="tooltip" data-placement="right" title="Dashboard">
+              <a class="nav-link" href="#">
+                <img src="assets/images/dashboard-icon-red.png" alt="icon" />
+                <span class="nav-link-text">Dashboard</span>
+              </a>
+            </li>
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Charts">
+              <a class="nav-link" href="current-uploads.html">
+                <img src="assets/images/uploads-icon.png" alt="icon" />
+                <span class="nav-link-text">Current Uploads</span>
+              </a>
+            </li>
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
+              <a class="nav-link" href="upload-video.html">
+                <img src="assets/images/add-icon.png" alt="icon" />
+                <span class="nav-link-text">Add Advertisement</span>
+              </a>
+            </li>
+          </ul>
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle mr-lg-2" id="alertsDropdown" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <img src="assets/images/notification-icon.png" alt="img" />
+                <span class="d-lg-none">Alerts
+                  <span class="badge badge-pill badge-warning">6 New</span>
+                </span>
+                <span class="indicator d-none d-lg-block">
+                  <i class="fa fa-fw fa-circle"></i>
+                </span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <div class="user-wrap">
+                <div class="media">
+                  <img class="mr-3" src="assets/images/user.png" alt="user" />
+                  <div class="media-body">
+                    <h5>Welcome</h5>
+                    <div class="user-dropdown-wrap">
+                      <div class="dropdown">
+                          <span>Michael Monet <i class="fa fa-angle-down" aria-hidden="true"></i></span>
+                          <ul class="dropdown-content">
+                          <li><a href="update-profile.html"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit Profile</a></li>
+                          <li><a href="login.html"><i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a></li>
+                          </ul>
+                      </div>
+                  </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <div class="content-wrapper">
+        <div class="row align-items-center row-padding">
+          <div class="col-md-6">
+            <div class="square-box d-flex">
+              <ul class="square">
+                <li>Achieved Review</li>
+              </ul>
+              <ul class="square square--one">
+                <li>Targeted Review</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="search-box">
+              <div class="searchbox" onClick="onClick(event)">
+                <input type="text" placeholder="Search here for an ad"/>
+                <button class="search-button">
+                  <i class="fa fa-search" aria-hidden="true"></i>
+                </button>
+              </div>
+              <div class="filter-button">
+                <select class="selectpicker" data-style="btn-primary">
+                    <option>Filter</option>
+                    <option>Ketchup</option>
+                    <option>Relish</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="barchart">
+          <canvas id="activityBartChart"></canvas>
+        </div>
+
+        <div class="row align-items-center row-padding">
+          <div class="col-md-6">
+            <div class="square-box d-flex">
+              <ul class="square">
+                <li>Negative Review</li>
+              </ul>
+              <ul class="square square--one">
+                <li>Positive Review</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="search-box">
+              <div class="searchbox" onClick="onClick(event)">
+                <input type="text" placeholder="Search here for an ad"/>
+                <button class="search-button">
+                  <i class="fa fa-search" aria-hidden="true"></i>
+                </button>
+              </div>
+              <div class="filter-button">
+                <select class="selectpicker" data-style="btn-primary">
+                    <option>Filter</option>
+                    <option>Ketchup</option>
+                    <option>Relish</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="chart"></div>
+        <p class="text-center">Total number of reviews </p>
+      </div>
+<div class="footer">Copyright © statsfountain. All rights reserved.</div>
+
+<script src="https://unpkg.com/react-bootstrap@next/dist/react-bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.8.6/apexcharts.min.js"></script>
+<script>
+  function openNav() {
+    document.getElementById("mySidebar").style.width = "250px";
+    document.getElementById("overlay-bg").style.display = "block";
+  }
+  
+  function closeNav() {
+    document.getElementById("mySidebar").style.width = "0";
+    document.getElementById("overlay-bg").style.display = "none";
+  }
+</script>
+<script>
+  var ctx = document.getElementById("activityBartChart").getContext("2d");
+
+Chart.defaults.global.responsive = true;
+Chart.defaults.global.defaultFontColor = "#939698";
+Chart.defaults.global.defaultFontSize = 14;
+Chart.defaults.global.defaultFontFamily = "'Open Sans', sans-serif";
+Chart.defaults.global.maintainAspectRatio = true;
+Chart.defaults.global.defaultFontStyle = "600";
+
+Chart.scaleService.updateScaleDefaults("linear", {
+	ticks: {
+		min: 0,
+		max: 1000,
+		stepSize: 200
+	}
+});
+
+var data = {
+	labels: ["Week 1", "Week 2", "Week 3", "Week 4"],
+	datasets: [
+		{
+			label: "In progress",
+			backgroundColor: "#f1887c",
+			borderColor: "rgb(255, 99, 132)",
+			data: [175, 400, 850, 650]
+		},
+		{
+			label: "Complete",
+			backgroundColor: "#d12e1a",
+			borderColor: "rgb(255, 99, 132)",
+			data: [275, 450, 875, 575]
+		}
+	]
+};
+
+var options = {
+	responsive: true,
+	layout: {
+		padding: { top: 50 }
+	},
+	legend: {
+		display: false
+	},
+	scales: {
+		xAxes: [
+			{
+				gridLines: {
+					display: false
+				},
+				ticks: {
+					padding: 20
+				}
+			}
+		],
+		yAxes: [
+			{
+				ticks: {
+					padding: 20
+				}
+			}
+		]
+	}
+};
+
+var myBarChart = new Chart(ctx, {
+	type: "bar",
+	data: data,
+	options: options
+});
+
+/*
+Progress bars */
+var inProgressContainer = document.querySelector("#inProgressStatus");
+var completeContainer = document.querySelector("#completeStatus");
+var inProgressCircleContainer = document.querySelector("#inProgressCircleStatus");
+var completeCircleContainer = document.querySelector("#completeCircleStatus");
+
+buildProgress(inProgressContainer, 0.25, "#d12e1a");
+buildProgress(completeContainer, 0.5, "#ffbc35");
+buildProgress(inProgressCircleContainer, 0.75, "#d12e1a", 5);
+buildProgress(completeCircleContainer, 0.5, "#ffbc35");
+
+function buildProgress(domContainer, progressValue, color, strokeWidth) {
+	var strengthBar = new ProgressBar.Circle(domContainer, {
+		color: color,
+		trailColor: "#d5d7de",
+		duration: 1000,
+		easing: "easeOut",
+		strokeWidth: strokeWidth || 5
+	});
+
+	strengthBar.animate(progressValue, {
+		from: { color: "#f1f6fe" },
+		to: { color: color },
+		step: function(state, bar) {
+			bar.path.setAttribute("stroke", state.color);
+		}
+	});
+};
+
+</script>
+
+
+<script>
+  var options = {
+    chart: {
+        type: "donut",
+        // zorgt dat de donut groter wordt en de legenda weg is.
+        sparkline: {
+            enabled: true
+        },
+        dropShadow: {
+            enabled: false,
+        },
+    },
+    // deze staan vast
+    series: [65, 35],
+    labels: ["", ""],
+    // voegt % toe aan de labels en toont waarden in de donut
+    dataLabels: {
+        enabled: true,
+         style: {
+            fontSize: '20px',
+            colors: ['#fff','#222'],
+         },
+        formatter: function(val) {
+            return val + "%";
+        }
+    },
+    
+    colors: ["#d12e1a", "#f1887c"],
+    
+    // zorgt voor standaard tooltip en correct weergave van de waarde
+    tooltip: {
+        enabled: true,
+        fillSeriesColor: false,
+        y: {
+            formatter: function(val) {
+                return val + "%";
+            }
+        }
+    },
+    
+    // zorgt ervoor dat de hovercolor gelijk is aan de standaard kleur
+    states: {
+        hover: {
+            filter: {
+                type: "none"
+            }
+        }
+    },
+    
+    
+    plotOptions: {
+        pie: {
+            // mag aan of uit (animatie)
+            expandOnClick: true,
+            // Weergave in het midden van de donut
+            donut: {
+                labels: {
+                    show: true,
+                    name: {
+                        color: '#262c37',
+                        fontSize: "20px",
+                        lineHeight: "25px",
+                    },
+                    value: {
+                        fontSize: "40px",
+                        formatter: function(val) {
+                            return val + "%";
+                        }
+                    }
+                }
+            }
+        }
+    }
+};
+
+var chart = new ApexCharts(document.querySelector("#chart"), options);
+
+chart.render();
+</script>
+</body>
+</html>

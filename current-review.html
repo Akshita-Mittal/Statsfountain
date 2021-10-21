@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<title>Dashboard</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, shrink-to-fit=no">
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="assets/css/theme.css">
+        <link rel="stylesheet" href="assets/css/main.css">
+        <link rel="stylesheet" href="assets/css/current-uploads.css">
+	</head>
+<body>
+  <div id="overlay-bg"></div> 
+  <div id="mySidebar" class="sidebar">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+    <a href="dashboard.html"><img src="assets/images/dashboard-icon.png" alt="icon" /> Dashboard</a>
+    <a href="current-uploads.html"><img src="assets/images/uploads-icon.png" alt="icon" /> Current Uploads</a>
+    <a href="upload-video.html"><img src="assets/images/add-icon.png" alt="icon" /> Add Advertisement</a>
+  </div>   
+    <nav class="navbar navbar-expand-lg navbar-dark bg-white fixed-top" id="mainNav">
+        <a class="navbar-brand" href="index.html">Statsfountain</a>
+        <button class="navbar-toggler navbar-toggler-right" onclick="openNav()" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <h2>Current Uploads / View Review</h2>
+          <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
+              <a class="nav-link" href="dashboard.html">
+                <img src="assets/images/dashboard-icon.png" alt="icon" />
+                <span class="nav-link-text">Dashboard</span>
+              </a>
+            </li>
+            <li class="nav-item active" data-toggle="tooltip" data-placement="right" title="Charts">
+              <a class="nav-link" href="current-uploads.html">
+                <img src="assets/images/uploads-icon-red.png" alt="icon" />
+                <span class="nav-link-text">Current Uploads</span>
+              </a>
+            </li>
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
+              <a class="nav-link" href="upload-video.html">
+                <img src="assets/images/add-icon.png" alt="icon" />
+                <span class="nav-link-text">Add Advertisement</span>
+              </a>
+            </li>
+          </ul>
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle mr-lg-2" id="alertsDropdown" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <img src="assets/images/notification-icon.png" alt="img" />
+                <span class="d-lg-none">Alerts
+                  <span class="badge badge-pill badge-warning">6 New</span>
+                </span>
+                <span class="indicator d-none d-lg-block">
+                  <i class="fa fa-fw fa-circle"></i>
+                </span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <div class="user-wrap">
+                <div class="media">
+                  <img class="mr-3" src="assets/images/user.png" alt="user" />
+                  <div class="media-body">
+                    <h5>Welcome</h5>
+                    <div class="user-dropdown-wrap">
+                      <div class="dropdown">
+                          <span>Michael Monet <i class="fa fa-angle-down" aria-hidden="true"></i></span>
+                          <ul class="dropdown-content">
+                          <li><a href="update-profile.html"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit Profile</a></li>
+                          <li><a href="login.html"><i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a></li>
+                          </ul>
+                      </div>
+                  </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+    </nav>
+      <div class="content-wrapper">
+        <div class="row">
+        <div class="col-md-12">
+            <div class="review-wrap">
+                <h3 class="heading-left">
+                    Chocolate Cake Only 3 Ingredients Without Egg
+                </h3>
+                <p class="desc-left">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+
+                <div class="review-table" style="overflow-x:auto;">
+                    <table class="table">
+                        <thead class="thead-light">
+                          <tr>
+                            <th scope="col">Reviewer Name <span>(Date and Time)</span> </th>
+                            <th scope="col">What do you like about this ad?</th>
+                            <th scope="col">What is positive in this ad?</th>
+                            <th scope="col">Will you try this at home?</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>Jane Doe <span>7 / 09 / 2020  |  8:45 PM</span></td>
+                            <td class="text-center">Positive</td>
+                            <td class="text-center">Chocolate Syrup</td>
+                            <td class="text-center">Ofcourse</td>
+                          </tr>
+                          <tr>
+                            <td>Jane Doe <span>7 / 09 / 2020  |  8:45 PM</span></td>
+                            <td class="text-center">Positive</td>
+                            <td class="text-center">Chocolate Syrup</td>
+                            <td class="text-center">Ofcourse</td>
+                          </tr>
+                          <tr>
+                            <td>Jane Doe <span>7 / 09 / 2020  |  8:45 PM</span></td>
+                            <td class="text-center">Positive</td>
+                            <td class="text-center">Chocolate Syrup</td>
+                            <td class="text-center">Ofcourse</td>
+                          </tr>
+                          <tr>
+                            <td>Jane Doe <span>7 / 09 / 2020  |  8:45 PM</span></td>
+                            <td class="text-center">Positive</td>
+                            <td class="text-center">Chocolate Syrup</td>
+                            <td class="text-center">Ofcourse</td>
+                          </tr>
+                          <tr>
+                            <td>Jane Doe <span>7 / 09 / 2020  |  8:45 PM</span></td>
+                            <td class="text-center">Positive</td>
+                            <td class="text-center">Chocolate Syrup</td>
+                            <td class="text-center">Ofcourse</td>
+                          </tr>
+                          <tr>
+                            <td>Jane Doe <span>7 / 09 / 2020  |  8:45 PM</span></td>
+                            <td class="text-center">Positive</td>
+                            <td class="text-center">Chocolate Syrup</td>
+                            <td class="text-center">Ofcourse</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                </div>
+
+            </div>
+        </div> 
+
+          <div class="col-md-12">
+            <div class="pagination">
+                <a href="#"><img src="assets/images/prev.png" alt="image" /></a>
+                <a href="#">1</a>
+                <a href="#" class="active">2</a>
+                <a href="#">3</a>
+                <a href="#">4</a>
+                <a href="#">5</a>
+                <a href="#">6</a>
+                <a href="#"><img src="assets/images/next.png" alt="image" /></a>
+              </div>
+          </div>
+          
+        </div>
+      </div>
+
+<div class="footer">Copyright © statsfountain. All rights reserved.</div>
+
+
+<script src="https://unpkg.com/react-bootstrap@next/dist/react-bootstrap.min.js"></script>
+<script>
+  function openNav() {
+    document.getElementById("mySidebar").style.width = "250px";
+    document.getElementById("overlay-bg").style.display = "block";
+  }
+  
+  function closeNav() {
+    document.getElementById("mySidebar").style.width = "0";
+    document.getElementById("overlay-bg").style.display = "none";
+  }
+</script>
+</body>
+</html>

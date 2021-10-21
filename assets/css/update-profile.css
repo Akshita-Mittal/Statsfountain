@@ -1,0 +1,76 @@
+.change-password-txt {
+    font-size: 14px;
+    line-height: 21px;
+    color: #d12e1a;
+    font-weight: 500;
+    font-family: "Lato";
+    text-decoration: underline;
+    display: block;
+    margin: 40px 0;
+}
+
+.change-password-txt:hover {
+    color: #d12e1a;
+}
+
+.form-input .no-border-input{
+    border-bottom: none;
+}
+
+.upload-media-wrap {
+    margin: 0 0 40px 0;
+} 
+
+.upload-media-wrap .media {
+    align-items: center;
+}
+
+.file-uploader input[type=file] {
+    cursor: pointer;
+    position: absolute;
+    font-size: 0;
+    text-indent: -100px;
+    color: rgb(0 0 0);
+    z-index: 3;
+    padding-top: 0;
+    top: 0;
+    left: 0;
+    width: 124px;
+    height: 124px;
+    outline: none;
+}
+
+.file-uploader {
+    position: relative;
+}
+
+.upload-media-wrap .media img {
+    width: 124px;
+    height: 124px;
+}
+
+.media-body h5 {
+    font-size: 16px;
+    line-height: 21px;
+    color: #333333;
+    font-weight: 600;
+    font-family: "Lato";
+    text-transform: uppercase;
+}
+
+.media-body p {
+    font-size: 15px;
+    line-height: 21px;
+    color: #c5c5c5;
+    font-weight: 500;
+    font-family: "Lato";
+}
+
+@media(max-width: 767px){
+    .change-password-txt {
+        margin: 0px;
+    }
+    .button {
+        margin: 20px 0;
+    }
+}
